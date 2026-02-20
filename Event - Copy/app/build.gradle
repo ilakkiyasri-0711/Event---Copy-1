@@ -1,0 +1,64 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt' // Add kapt plugin for Room
+}
+
+android {
+    namespace "com.arun.event"
+    compileSdk 34
+    buildToolsVersion "34.0.0"
+
+    defaultConfig {
+        applicationId "com.arun.event"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.activity:activity:1.8.2'
+
+    def room_version = "2.6.1" // Updated Room version
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version" // Use kapt for Room
+
+    def lifecycle_version = "2.6.2" //Updated lifecycle version
+
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime:$lifecycle_version"
+
+    testImplementation 'junit:junit:4.13.2' // Updated JUnit
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5' // Updated JUnit Ext
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1' // Updated Espresso
+    implementation 'com.google.android.material:material:1.11.0' // Updated Material
+
+    implementation 'com.itextpdf:itextg:5.5.10'
+    implementation 'com.karumi:dexter:6.2.2'
+}

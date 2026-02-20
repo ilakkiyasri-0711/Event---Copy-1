@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:visibility="gone"
+        android:background="@color/colorPrimary"
+        android:layout_gravity="center"
+        android:id="@+id/btnGoToToday"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:padding="5dp"
+        android:textSize="11sp"
+        android:text="Go to today"
+        android:textColor="@android:color/white" />
+
+
+    <!-- days toolbar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/imgPrevMonth"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="40dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_left"/>
+
+        <LinearLayout
+            android:id="@+id/date_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_toRightOf="@id/imgPrevMonth"
+            android:layout_toEndOf="@id/imgPrevMonth">
+            <!-- date title -->
+            <TextView
+                android:id="@+id/txtCurrentDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textStyle="normal"
+                android:textAppearance="@android:style/TextAppearance.Holo.Medium"
+                android:textColor="#222222"
+                android:text="2018"/>
+            <!-- date title -->
+            <TextView
+                android:id="@+id/txtMonthYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#222222"
+                android:text="March 2020"/>
+            <!-- date title -->
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgNextMonth"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:layout_toEndOf="@id/date_display"
+            android:layout_toRightOf="@id/date_display"
+            android:src="@drawable/ic_arrow_right"/>
+    </RelativeLayout>
+
+    <!-- days header -->
+    <LinearLayout
+        android:id="@+id/calendar_header"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textColor="#222222"
+            android:text="MON"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textColor="#222222"
+            android:text="TUE"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textColor="#222222"
+            android:text="WED"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textColor="#222222"
+            android:text="THU"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textColor="#222222"
+            android:text="FRI"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textColor="#222222"
+            android:text="SAT"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textColor="#222222"
+            android:text="SUN"/>
+
+    </LinearLayout>
+
+    <!-- days view -->
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="7"/>
+
+</LinearLayout>

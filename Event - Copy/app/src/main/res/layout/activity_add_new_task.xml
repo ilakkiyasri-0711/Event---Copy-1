@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AddTaskActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_marginTop="50dp"
+                android:text="Select Date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:enabled="false"
+                    android:layout_weight="1"
+                    android:id="@+id/edDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageButton
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_baseline_date_range_24"
+                    android:id="@+id/btnDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+            <EditText
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:hint="Title"
+                android:layout_marginTop="20dp"
+                android:inputType="textPersonName"
+                android:id="@+id/edTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:text="Select Department"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Spinner
+                android:layout_marginTop="10dp"
+                android:id="@+id/spDept"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:text="Select Session"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <Spinner
+                android:layout_marginTop="10dp"
+                android:id="@+id/spSession"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:hint="Enter the hall name"
+                android:layout_marginTop="20dp"
+                android:inputType="textPersonName"
+                android:id="@+id/edStaffName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:inputType="textPersonName"
+                android:hint="Staff designation &amp; dept"
+                android:layout_marginTop="20dp"
+                android:id="@+id/edNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:hint="Staff mobile number"
+                android:layout_marginTop="20dp"
+                android:inputType="number"
+                android:maxLength="10"
+                android:id="@+id/edMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:textColor="@android:color/white"
+                android:layout_marginTop="20dp"
+                android:text="Add"
+                android:id="@+id/btnAdd"
+                android:background="@color/btnColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
