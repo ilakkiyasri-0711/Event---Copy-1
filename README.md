@@ -1,11 +1,3 @@
-User: give readme for this folder
-
-GitHub Copilot: Enable Claude Haiku 4.5 for all clients
-[object Object]
-
-User: @agent Enable: "Enable Claude Haiku 4.5 for all clients"
-
-Workspace: Collecting workspace information# Event Management Application - README
 
 ## Project Overview
 
